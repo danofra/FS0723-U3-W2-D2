@@ -9,8 +9,8 @@ const AddComment = ({ asin }) => {
   });
 
   useEffect(() => {
-    setComment((prevComment) => ({
-      ...prevComment,
+    setComment((Comment) => ({
+      ...Comment,
       elementId: asin,
     }));
   }, [asin]);
@@ -55,8 +55,8 @@ const AddComment = ({ asin }) => {
             placeholder="Inserisci qui il testo"
             value={comment.comment}
             onChange={(e) =>
-              setComment((prevComment) => ({
-                ...prevComment,
+              setComment((Comment) => ({
+                ...Comment,
                 comment: e.target.value,
               }))
             }
@@ -68,8 +68,8 @@ const AddComment = ({ asin }) => {
             as="select"
             value={comment.rate}
             onChange={(e) =>
-              setComment((prevComment) => ({
-                ...prevComment,
+              setComment((Comment) => ({
+                ...Comment,
                 rate: e.target.value,
               }))
             }
